@@ -6,7 +6,7 @@ using Xunit;
 
 namespace weeklyChallenges03.Tests
 {
-    public class ChallengesSet03Tests
+    public class ChallengesSets03Tests
     {
         [Theory]
         [InlineData(new bool[] { true, true, true, true }, false)]
