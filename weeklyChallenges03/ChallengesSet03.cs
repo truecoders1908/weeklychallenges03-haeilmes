@@ -32,7 +32,12 @@ namespace weeklyChallenges03
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            if (password.Any(char.IsLower) && password.Any(char.IsUpper) && password.Any(char.IsDigit))
+            {
+                return true;
+            }
+            return false;
+
         }
 
         public char GetFirstLetterOfString(string val)
@@ -47,7 +52,7 @@ namespace weeklyChallenges03
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            if(divisor == 0)
+            if (divisor == 0)
             {
                 return 0;
             }
@@ -56,17 +61,31 @@ namespace weeklyChallenges03
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            return nums[nums.Length - 1] - nums[0];
         }
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            List<int> odds = new List<int>();
+            for (int i = 0; i < 100; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    odds.Add(i);
+                }
+            }
+            return odds.ToArray();
+
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].ToUpper();
+            }
+
         }
 
     }
